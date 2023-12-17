@@ -1,6 +1,5 @@
 import './globals.css'
 import { Poppins } from 'next/font/google'
-import { NextSeo } from 'next-seo';
 import Head from 'next/head'
 const poppins = Poppins({
   subsets: ['latin'],
