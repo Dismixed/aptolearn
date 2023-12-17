@@ -373,7 +373,7 @@ export default function Home() {
                     <div className="mt-24 md:grid md:grid-cols-4 flex flex-col items-center justify-center gap-20 md:gap-4 lg:gap-8">
                         <div className="col-span-1 dark:bg-gray-800  rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
                             <img className="left-0 right-0 text-center mx-auto h-24 w-24 rounded-full absolute -top-12"
-                                    src="/face1.webp" alt={"Face of Eric Yu"}/>
+                                    src="/face1.webp" alt={"Face of Eric Yu"} loading="lazy" />
                             <p className="text-center my-auto">AptoLearn has helped me so much, especially with finals season. I have been able to just review the content I needed without extra fluff.</p>
                             <img className="mx-auto mt-auto pt-2 w-1/2"
                                     src="/pitt.webp" alt="University of Pittsburgh"/>
@@ -382,7 +382,7 @@ export default function Home() {
                         </div>
                         <div className="col-span-1 dark:bg-gray-800 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
                             <img className="left-0 right-0 text-center mx-auto h-24 w-24 rounded-full absolute -top-12"
-                                 src="/face2.webp" alt={"Face of Masie Manson"}/>
+                                 src="/face2.webp" alt={"Face of Masie Manson"} loading="lazy" />
                             <p className="text-center my-auto">So far, AptoLearn has been a gamechanger for me. I was able to make a study path that fit my own needs and wants instead of using my classes' textbook. </p>
                             <img className="mx-auto mt-auto pt-2 w-1/2"
                                  src="/MIT.webp" alt="Massachusetts Institute of Technology"/>
@@ -391,7 +391,7 @@ export default function Home() {
                         </div>
                         <div className="col-span-1 dark:bg-gray-800 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
                             <img className="left-0 right-0 text-center mx-auto h-24 w-24 rounded-full absolute -top-12"
-                                 src="/face3.webp" alt={"Face of Alex Dawn"}/>
+                                 src="/face3.webp" alt={"Face of Alex Dawn"} loading="lazy" />
                             <p className="text-center my-auto">I love how one of the first things I'm asked about is my learning style. I was sick of using resources that don't match with the way I learn, but AptoLearn provided me with all sorts of resources that fit my style.</p>
                             <img className="mx-auto mt-auto pt-2 w-1/2"
                                  src="/tufts.webp" alt="Tufts University"/>
@@ -400,7 +400,7 @@ export default function Home() {
                         </div>
                         <div className="col-span-1 dark:bg-gray-800 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
                             <img className="left-0 right-0 text-center mx-auto h-24 w-24 rounded-full absolute -top-12"
-                                 src="/face4.webp" alt={"Face of Jakari Harris"}/>
+                                 src="/face4.webp" alt={"Face of Jakari Harris"} loading="lazy" />
                             <p className="text-center my-auto">I was lacking a way to understand my course content efficiently when I found AptoLearn. I used it to get up to speed on my classes and make sure I fully understood it before exams.</p>
                             <img className="mx-auto mt-auto pt-2 w-1/2"
                                  src="/duke.webp" alt="Duke University"/>
