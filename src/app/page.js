@@ -9,13 +9,13 @@ const ServiceCard = ({ icon, title, details }) => {
     return (
         <>
             <div className="w-full h-full px-4 md:w-1/2 lg:w-1/3">
-                <div className="border border-gray-200 mb-9 rounded-[20px] h-full bg-white p-10 shadow-2 transition-all hover:shadow-lg dark:bg-dark-2 md:px-7 xl:px-10">
+                <div className="border border-gray-200 mb-9 rounded-[20px] h-full bg-white dark:shadow-2xl dark:bg-gray-800 dark:border-0 p-10 shadow-2 transition-all hover:shadow-lg dark:bg-dark-2 md:px-7 xl:px-10">
                     <div className="mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-blue-600">
                         {icon}
                     </div>
-                    <h4 className="mb-[14px] text-2xl font-semibold text-dark dark:text-white">
+                    <h3 className="mb-[14px] text-2xl font-semibold text-dark dark:text-white">
                         {title}
-                    </h4>
+                    </h3>
                     <p className="text-body-color dark:text-dark-6">{details}</p>
                 </div>
             </div>
@@ -50,10 +50,10 @@ export default function Home() {
     }
     return (
         <main className="bg-white dark:bg-[#121212]">
-            <div className={'dark:hidden w-1/2 h-96 absolute z-0 top-0 right-0'}>
+            <div className={'dark:hidden w-3/4 md:w-1/2 h-40 md:h-96 absolute z-0 top-0 right-0'}>
                 <Image alt={""} priority placeholder={'empty'} src={'/images/blur1.png'} layout={'fill'} className={'absolute top-0 right-0'}></Image>
             </div>
-            <div className={'dark:hidden w-2/3 h-2/3 absolute z-0 -left-16 top-1/8'}>
+            <div className={'dark:hidden w-full md:w-2/3h h-64 md:h-2/3 absolute z-0 -left-16 top-1/8'}>
                 <Image alt={""} priority placeholder={'empty'} src={'/images/blur3.png'} layout={'fill'} className={'absolute top-0 right-0'}></Image>
             </div>
             <section className="w-full z-10">
@@ -83,7 +83,7 @@ export default function Home() {
                 </div>
             </section>
             <div className="w-full mt-8 lg:mt-4 z-10">
-                <img src={"/bigmockup.webp"} className="animate__animated animate__fadeIn animate__delay-1s"/>
+                <img src={"/bigmockup.webp"} className="animate__animated animate__fadeIn animate__delay-1s" alt="Large mockup of AptoLearn's dashboard"/>
             </div>
             <section className="w-full">
                 <div className=" px-5 py-12 mx-auto lg:px-16">
@@ -127,12 +127,12 @@ export default function Home() {
                 <div className="px-4 md:px-8 lg:px-12 xl:px-20 mx-auto">
                     <div className="flex flex-col md:flex-row-reverse gap-4 lg:gap-8 items-center md:justify-between">
                         <div className="ml-4 md:px-4 w-[90%] md:w-[40%] lg:w-[50%] aspect-square bg-gray-100 dark:bg-gray-800 flex flex-row items-center">
-                            <img className="w-full rounded"
+                            <img className="w-full rounded" alt={"Onboarding mockup"}
                                  src="/onboardingmockup-removebg.webp"/>
                         </div>
                         <div className="px-4 w-full md:w-[60%] lg:w-[50%]">
                             <div className="mt-10 lg:mt-0 text-center md:text-start">
-                                <span className="mb-4 text-lg font-semibold tracking-wide text-blue-600 uppercase">
+                                <span className="mb-4 text-lg font-semibold tracking-wide text-blue-600 dark:text-blue-500 uppercase">
                                     AptoLearn's Key Features
                                 </span>
                                 <h2 className="mb-5 text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-dark dark:text-white">
@@ -185,7 +185,7 @@ export default function Home() {
                 <div className="px-4 md:px-8 xl:px-20 mx-auto">
                     <div className="flex flex-col md:flex-row gap-4 lg:gap-8 items-center md:justify-between">
                         <div className="ml-4 md:px-4 w-[90%] md:w-[40%] lg:w-[50%] aspect-square bg-gray-100 dark:bg-gray-800 flex flex-row items-center">
-                            <img className="w-full rounded"
+                            <img className="w-full rounded" alt={"Content mockup"}
                                  src="/contentmockup.webp"/>
                         </div>
                         <div className="px-4 w-full md:w-[60%] lg:w-[50%]">
@@ -201,16 +201,16 @@ export default function Home() {
                                 </p>
                                 <div className="mt-8 grid grid-cols-3 gap-4 md:gap-8">
                                     <AnimationOnScroll animateIn={'animate__fadeInRight'} animateOnce delay={0} className="animate__animated flex flex-col col-span-1">
-                                        <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600">500+</h3>
-                                        <p className="text-lg lg:text-2xl text-gray-700">Different <br/> Sources</p>
+                                        <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600 dark:text-blue-500">500+</h3>
+                                        <p className="text-lg lg:text-2xl text-gray-700 dark:text-gray-300">Different <br/> Sources</p>
                                     </AnimationOnScroll>
                                     <AnimationOnScroll animateIn={'animate__fadeInRight'} animateOnce delay={100} className="animate__animated flex flex-col col-span-1">
-                                        <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600">25</h3>
-                                        <p className="text-lg lg:text-2xl text-gray-700">Academic subjects</p>
+                                        <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600 dark:text-blue-500">25</h3>
+                                        <p className="text-lg lg:text-2xl text-gray-700 dark:text-gray-300">Academic subjects</p>
                                     </AnimationOnScroll>
                                     <AnimationOnScroll animateIn={'animate__fadeInRight'} animateOnce delay={200} className="animate__animated flex flex-col col-span-1">
-                                        <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600">10,000+</h3>
-                                        <p className="text-lg lg:text-2xl text-gray-700">Total <br/> Resources</p>
+                                        <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600 dark:text-blue-500">10,000+</h3>
+                                        <p className="text-lg lg:text-2xl text-gray-700 dark:text-gray-300">Total <br/> Resources</p>
                                     </AnimationOnScroll>
                                 </div>
                             </div>
@@ -221,7 +221,7 @@ export default function Home() {
             <section className="pb-4 pb-16 pt-16 dark:bg-dark">
                 <div className="px-4 md:px-8 lg:px-20 mx-auto">
                     <div className="mx-auto mb-8 md:w-3/5 text-center lg:mb-12">
-                        <div className="mb-2 text-lg font-semibold tracking-wide text-blue-600 uppercase">
+                        <div className="mb-2 text-lg font-semibold tracking-wide text-blue-600 dark:text-blue-500 uppercase">
                             Discover AptoLearn's Benefits
                         </div>
                         <h2 className="text-4xl md:text-5xl font-bold text-center text-dark dark:text-white">
@@ -362,47 +362,50 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section className="pt-16 pb-16 bg-gray-50 dark:bg-dark relative">
+            <section className="pt-16 pb-16 bg-gray-50 dark:bg-[#121212] relative">
                 <div className="px-4 md:px-8 xl:px-20 mx-auto">
-                    <div className="mb-2 text-lg font-semibold text-center tracking-wide text-blue-600 uppercase mx-auto">What Students Think About AptoLearn</div>
+                    <div className="mb-2 text-lg font-semibold text-center tracking-wide text-blue-600 dark:blue-500 uppercase mx-auto">What Students Think About AptoLearn</div>
                     <h2 className="text-4xl md:text-5xl mx-auto text-center font-bold text-dark dark:text-white lg:w-1/2">Studying is hard. Let us help you
                         help yourself.</h2>
                     <p className="mt-4 mx-auto text-center text-lg text-body-color dark:text-dark-6 lg:w-1/2">
-                        AptoLearn is a personalized learning platform that helps you achieve your academic goals. We
-                        provide you with the resources you need to succeed in your courses and beyond.
+                        AptoLearn provides you with the resources you need to succeed in your courses and beyond. See what current students are saying about AptoLearn.
                     </p>
                     <div className="mt-24 md:grid md:grid-cols-4 flex flex-col items-center justify-center gap-20 md:gap-4 lg:gap-8">
-                        <div className="col-span-1 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
+                        <div className="col-span-1 dark:bg-gray-800  rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
                             <img className="left-0 right-0 text-center mx-auto h-24 w-24 rounded-full absolute -top-12"
-                                    src="/face1-modified.jpg"/>
+                                    src="/face1.webp" alt={"Face of Eric Yu"}/>
                             <p className="text-center my-auto">AptoLearn has helped me so much, especially with finals season. I have been able to just review the content I needed without extra fluff.</p>
                             <img className="mx-auto mt-auto pt-2 w-1/2"
                                     src="/pitt.webp" alt="University of Pittsburgh"/>
-                            <h3 className="text-center font-bold text-xl mt-2">Joshua Oguh, Biology Major</h3>
+                            <h3 className="text-center font-bold text-xl mt-4">Eric Yu </h3>
+                            <div className="text-lg text-center">Biology Major</div>
                         </div>
-                        <div className="col-span-1 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
+                        <div className="col-span-1 dark:bg-gray-800 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
                             <img className="left-0 right-0 text-center mx-auto h-24 w-24 rounded-full absolute -top-12"
-                                 src="/face2-modified.jpg"/>
+                                 src="/face2.webp" alt={"Face of Masie Manson"}/>
                             <p className="text-center my-auto">So far, AptoLearn has been a gamechanger for me. I was able to make a study path that fit my own needs and wants instead of using my classes' textbook. </p>
                             <img className="mx-auto mt-auto pt-2 w-1/2"
                                  src="/MIT.webp" alt="Massachusetts Institute of Technology"/>
-                            <h3 className="text-center font-bold text-xl mt-2">Joshua Oguh, Biology Major</h3>
+                            <h3 className="text-center font-bold text-xl mt-4">Masie Manson</h3>
+                            <div className="text-lg text-center">Computer Science Major</div>
                         </div>
-                        <div className="col-span-1 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
+                        <div className="col-span-1 dark:bg-gray-800 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
                             <img className="left-0 right-0 text-center mx-auto h-24 w-24 rounded-full absolute -top-12"
-                                 src="/face3-modified.jpg"/>
+                                 src="/face3.webp" alt={"Face of Alex Dawn"}/>
                             <p className="text-center my-auto">I love how one of the first things I'm asked about is my learning style. I was sick of using resources that don't match with the way I learn, but AptoLearn provided me with all sorts of resources that fit my style.</p>
                             <img className="mx-auto mt-auto pt-2 w-1/2"
                                  src="/tufts.webp" alt="Tufts University"/>
-                            <h3 className="text-center font-bold text-xl mt-2">Joshua Oguh, Biology Major</h3>
+                            <h3 className="text-center font-bold text-xl mt-4">Alex Dawn</h3>
+                            <div className="text-lg text-center">Economics Major</div>
                         </div>
-                        <div className="col-span-1 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
+                        <div className="col-span-1 dark:bg-gray-800 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
                             <img className="left-0 right-0 text-center mx-auto h-24 w-24 rounded-full absolute -top-12"
-                                 src="/face4-modified.jpg"/>
+                                 src="/face4.webp" alt={"Face of Jakari Harris"}/>
                             <p className="text-center my-auto">I was lacking a way to understand my course content efficiently when I found AptoLearn. I used it to get up to speed on my classes and make sure I fully understood it before exams.</p>
                             <img className="mx-auto mt-auto pt-2 w-1/2"
                                  src="/duke.webp" alt="Duke University"/>
-                            <h3 className="text-center font-bold text-xl mt-2">Joshua Oguh, Biology Major</h3>
+                            <h3 className="text-center font-bold text-xl mt-4">Jakari Harris</h3>
+                            <div className="text-lg text-center">Math Major</div>
                         </div>
                     </div>
                 </div>
@@ -481,20 +484,20 @@ export default function Home() {
                 </div>
             </section>
             <section className="px-4 md:px-16 lg:px-16 pb-16">
-                <div className="w-full bg-gray-100 p-8 md:p-12 lg:p-16 xl:p-24 flex flex-col lg:flex-row items-center gap-8 lg:gap-16 rounded-2xl">
+                <div className="w-full bg-gray-100 dark:bg-gray-800 p-8 md:p-12 lg:p-16 xl:p-24 flex flex-col lg:flex-row items-center gap-8 lg:gap-16 rounded-2xl">
                     <h3 className="text-5xl font-bold text-center lg:text-start lg:w-1/2">Join the waitlist for early access!</h3>
                     <form action="https://formkeep.com/f/49adcf2e0d4f" method="post" id="form" name="form"
                           acceptCharset="UTF-8" encType="multipart/form-data"
                           className="p-2 transition duration-500 ease-in-out transform border2 bg-gray-50 w-full lg:w-1/2 rounded-xl sm:flex">
                         <div className="flex-1 min-w-0 revue-form-group">
-                            <label htmlFor="member_email" className="sr-only">Email address</label>
-                            <input id="cta-email" type="email" onChange={(e) => setEmail2(e.target.value)} value={email2}
+                            <label htmlFor="member_email2" className="sr-only">Email address</label>
+                            <input id="cta-email2" type="email" onChange={(e) => setEmail2(e.target.value)} value={email2}
                                    className="block w-full px-5 py-3 text-base placeholder-gray-300 transition duration-500 ease-in-out transform bg-transparent border border-transparent rounded-md text-neutral-600 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
                                    placeholder="Enter your email  " />
                         </div>
                         <div className="mt-4 sm:mt-0 sm:ml-3 revue-form-actions">
                             <button type="submit" name="Subscribe"
-                                    id="member_submit" onClick={(e) => sendForm(e, 2)}
+                                    id="member_submit2" onClick={(e) => sendForm(e, 2)}
                                     className="block w-full px-5 py-3 text-base font-medium text-white bg-blue-600 border border-transparent rounded-lg shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300 transition-all sm:px-10">Sign up</button>
                         </div>
                     </form>
