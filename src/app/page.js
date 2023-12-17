@@ -3,7 +3,7 @@ import Image from 'next/image'
 import 'animate.css';
 import {useState} from "react";
 import { useRouter } from 'next/navigation'
-import ScrollAnimation from 'react-animate-on-scroll';
+import {AnimationOnScroll} from 'react-animation-on-scroll';
 
 const ServiceCard = ({ icon, title, details }) => {
     return (
@@ -145,7 +145,7 @@ export default function Home() {
                                     It then creates a roadmap to help you reach your goals in the most efficient way possible.
                                 </p>
                                 <div className="mt-8 flex flex-col gap-2 xl:gap-8">
-                                    <ScrollAnimation animateIn={'animate__fadeInLeft'} animateOnce className="flex flex-row items-center animate__animated">
+                                    <AnimationOnScroll animateIn={'animate__fadeInLeft'} animateOnce className="flex flex-row items-center animate__animated">
                                         <div className="flex flex-row items-center justify-center p-1 rounded-full bg-blue-600">
                                             <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor"
                                                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -154,8 +154,8 @@ export default function Home() {
                                             </svg>
                                         </div>
                                         <p className="text-md xl:text-lg ml-2 md:ml-4"><span className="font-bold">Flexible Learning</span>: AptoLearn adapts to your style, creating a flexible and effective learning environment.</p>
-                                    </ScrollAnimation>
-                                    <ScrollAnimation animateIn={'animate__fadeInLeft'} animateOnce className="flex flex-row items-center animate__animated">
+                                    </AnimationOnScroll>
+                                    <AnimationOnScroll animateIn={'animate__fadeInLeft'} animateOnce className="flex flex-row items-center animate__animated">
                                         <div className="flex flex-row items-center justify-center p-1 rounded-full bg-blue-600">
                                             <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor"
                                                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -164,8 +164,8 @@ export default function Home() {
                                             </svg>
                                         </div>
                                         <p className="text-md xl:text-lg ml-2 md:ml-4"><span className="font-bold">Objective Analysis</span>: Our algorithm analyzes your learning objectives to ensure precise recommendations.</p>
-                                    </ScrollAnimation>
-                                    <ScrollAnimation animateIn={'animate__fadeInLeft'} animateOnce className="flex flex-row items-center animate__animated">
+                                    </AnimationOnScroll>
+                                    <AnimationOnScroll animateIn={'animate__fadeInLeft'} animateOnce className="flex flex-row items-center animate__animated">
                                         <div className="flex flex-row items-center justify-center p-1 rounded-full bg-blue-600">
                                             <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor"
                                                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -174,7 +174,7 @@ export default function Home() {
                                             </svg>
                                         </div>
                                         <p className="text-md xl:text-lg ml-2 md:ml-4"><span className="font-bold">Structured Learning</span>: Resources are thoughtfully organized to provide a structured and coherent learning experience.</p>
-                                    </ScrollAnimation>
+                                    </AnimationOnScroll>
                                 </div>
                             </div>
                         </div>
@@ -200,18 +200,18 @@ export default function Home() {
                                     Each resource is split into digestible sections, making it effortless to grasp.
                                 </p>
                                 <div className="mt-8 grid grid-cols-3 gap-4 md:gap-8">
-                                    <ScrollAnimation animateIn={'animate__fadeInRight'} animateOnce delay={0} className="animate__animated flex flex-col col-span-1">
+                                    <AnimationOnScroll animateIn={'animate__fadeInRight'} animateOnce delay={0} className="animate__animated flex flex-col col-span-1">
                                         <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600">500+</h3>
                                         <p className="text-lg lg:text-2xl text-gray-700">Different <br/> Sources</p>
-                                    </ScrollAnimation>
-                                    <ScrollAnimation animateIn={'animate__fadeInRight'} animateOnce delay={100} className="animate__animated flex flex-col col-span-1">
+                                    </AnimationOnScroll>
+                                    <AnimationOnScroll animateIn={'animate__fadeInRight'} animateOnce delay={100} className="animate__animated flex flex-col col-span-1">
                                         <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600">25</h3>
                                         <p className="text-lg lg:text-2xl text-gray-700">Academic subjects</p>
-                                    </ScrollAnimation>
-                                    <ScrollAnimation animateIn={'animate__fadeInRight'} animateOnce delay={200} className="animate__animated flex flex-col col-span-1">
+                                    </AnimationOnScroll>
+                                    <AnimationOnScroll animateIn={'animate__fadeInRight'} animateOnce delay={200} className="animate__animated flex flex-col col-span-1">
                                         <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600">10,000+</h3>
                                         <p className="text-lg lg:text-2xl text-gray-700">Total <br/> Resources</p>
-                                    </ScrollAnimation>
+                                    </AnimationOnScroll>
                                 </div>
                             </div>
                         </div>
@@ -259,8 +259,8 @@ export default function Home() {
                                     xmlns="http://www.w3.org/2000/svg"
                                 >
                                     <path
-                                        fill-rule="evenodd"
-                                        clip-rule="evenodd"
+                                        fillRule="evenodd"
+                                        clipRule="evenodd"
                                         d="M9.89195 14.625C10.9995 10.1252 13.769 7.875 18.1996 7.875C24.8458 7.875 25.6765 12.9375 28.9996 13.7812C31.2151 14.3439 33.1535 13.5002 34.815 11.25C33.7075 15.7498 30.9379 18 26.5073 18C19.8611 18 19.0304 12.9375 15.7073 12.0938C13.4918 11.5311 11.5535 12.3748 9.89195 14.625ZM1.58423 24.75C2.69174 20.2502 5.46132 18 9.89195 18C16.5381 18 17.3689 23.0625 20.692 23.9062C22.9075 24.4689 24.8458 23.6252 26.5073 21.375C25.3998 25.8748 22.6302 28.125 18.1996 28.125C11.5535 28.125 10.7227 23.0625 7.39963 22.2188C5.18405 21.6561 3.24576 22.4998 1.58423 24.75Z"
                                         fill="white"
                                     />
@@ -418,9 +418,9 @@ export default function Home() {
                                 <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
                                     <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
                                          fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
+                                        <path fillRule="evenodd"
                                               d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                                              clip-rule="evenodd"></path>
+                                              clipRule="evenodd"></path>
                                     </svg>
                                     Will AptoLearn be free?
                                 </h3>
@@ -433,9 +433,9 @@ export default function Home() {
                                 <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
                                     <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
                                          fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
+                                        <path fillRule="evenodd"
                                               d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                                              clip-rule="evenodd"></path>
+                                              clipRule="evenodd"></path>
                                     </svg>
                                     How do I get access?
                                 </h3>
@@ -449,9 +449,9 @@ export default function Home() {
                                 <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
                                     <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
                                          fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
+                                        <path fillRule="evenodd"
                                               d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                                              clip-rule="evenodd"></path>
+                                              clipRule="evenodd"></path>
                                     </svg>
                                     How does the reccomentation system work?
                                 </h3>
@@ -465,9 +465,9 @@ export default function Home() {
                                 <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
                                     <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
                                          fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
+                                        <path fillRule="evenodd"
                                               d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                                              clip-rule="evenodd"></path>
+                                              clipRule="evenodd"></path>
                                     </svg>
                                     When Will AptoLearn be released?
                                 </h3>
