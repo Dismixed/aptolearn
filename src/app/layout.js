@@ -1,11 +1,13 @@
 import './globals.css'
 import { Poppins } from 'next/font/google'
 import Head from 'next/head'
+import Script from "next/script";
 const poppins = Poppins({
   subsets: ['latin'],
   variable: '--font-poppins',
   weight: ['400', '500', '600', '700']
 })
+import { GoogleTagManager } from '@next/third-parties/google'
 
 export default function RootLayout({ children }) {
 
@@ -22,7 +24,8 @@ export default function RootLayout({ children }) {
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#ffffff" />
         </Head>
-      <body className={`${poppins.variable} bg-white dark:bg-[#121212]`}>{children}</body>
+        <GoogleTagManager gtmId="GTM-5XXZ8LZ9" />
+        <body className={`${poppins.variable} bg-white dark:bg-[#121212]`}>{children}</body>
     </html>
   )
 }
