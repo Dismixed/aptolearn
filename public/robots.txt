@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+Disallow: /privacypolicy
+Disallow: /termsandconditions
+Sitemap: https://aptolearn.com/sitemap.xml
