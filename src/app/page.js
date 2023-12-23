@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 import {AnimationOnScroll} from 'react-animation-on-scroll';
 import axios from 'axios'
 import Footer from "../../components/Footer";
+import { useSearchParams } from 'next/navigation'
 
 const ServiceCard = ({ icon, title, details }) => {
     return (
@@ -30,17 +31,21 @@ export default function Home() {
     const [email, setEmail] = useState('');
     const [email2, setEmail2] = useState('');
 
+    const searchParams = useSearchParams()
     const router = useRouter();
 
+    const ref = searchParams.get('ref')
+
+    console.log(ref)
     const sendForm = (e, num) => {
         e.preventDefault();
         const body = {
             email: num === 1 ? email : email2,
+            ref: ref
         }
         console.log(body)
         axios.post('https://edulearningbackend-d59f4d283be3.herokuapp.com/waitlist', body).then((response) => {
-            console.log(response)
-            router.push('/success');
+            router.push(`/success?code=${response.data.code}`)
         });
     }
     return (
