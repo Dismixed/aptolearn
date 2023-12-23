@@ -61,11 +61,11 @@ export default function Home() {
                     <div className="flex flex-col items-center justify-center px-8 pt-8 lg:px-12 md:pt-16 lg:pt-24">
                         <h1 className="text-5xl animate__animated animate__fadeInUp md:text-7xl xl:text-8xl z-10 font-sans text-center px-4 md:px-16 lg:px-24 font-bold mt-8 text-dark dark:text-white">
                             Start Studying Smarter. <br className="hidden lg:block" />
-                            Your <span className="bg-gradient-to-r from-cyan-500 to-blue-700 text-transparent bg-clip-text">Custom </span>Learning Path Awaits!
+                            Your <span className="bg-gradient-to-r from-cyan-500 to-blue-700 text-transparent bg-clip-text">Personalized </span>Learning Path Awaits!
                         </h1>
-                        <p className="mt-6 mx-32 animate__fadeIn animate__delay-1s text-xl animate__animated z-10 md:px-12 text-center text-body-color dark:text-dark-6">
+                        <p className="mt-6 md:mx-24 lg:mx-32 mx-8 animate__fadeIn animate__delay-1s text-xl animate__animated z-10 md:px-12 text-center text-body-color dark:text-dark-6">
                             AptoLearn is the only hyper-personalized learning platform for college students that creates
-                            a custom study path with individualized resources to meet your specific learning goals.
+                            a custom study path with resources specific to your goals.
                         </p>
                         <p className={'animate__animated mt-6 animate__fadeIn animate__delay-1s text-lg animate__animated z-10 md:px-12 text-center text-body-color dark:text-dark-6'}>
                             <span>Sign up now to get early access!</span>

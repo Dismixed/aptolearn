@@ -51,7 +51,10 @@ export default function SuccessPage() {
             <div className="bg-gray-200 w-[80%] md:w-3/5 lg:w-1/2 mt-4 p-4 md:p-8 flex flex-col items-center">
                 <div className="flex flex-row items-center">
                     <p className="text-gray-800">Referral link:</p>
-                    <button className="ml-2 bg-blue-600 hover:bg-blue-700 transition-all text-white font-bold py-1 px-2 rounded">
+                    <button onClick={() => {
+                        navigator.clipboard.writeText(`https://aptolearn.com?ref=${code}`)
+                    }}
+                        className="ml-2 bg-blue-600 hover:bg-blue-700 transition-all text-white font-bold py-1 px-2 rounded">
                         Copy
                     </button>
                 </div>

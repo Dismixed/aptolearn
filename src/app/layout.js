@@ -32,5 +32,5 @@ export default function RootLayout({ children }) {
 
 export const metadata = {
   title: 'AptoLearn',
-  description: 'Start Studying Smarter. Your Custom Learning Path Awaits!',
+    description: 'Start Studying Smarter. Your Personalized Learning Path Awaits!',
 }
