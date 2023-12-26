@@ -23,8 +23,25 @@ export default function RootLayout({ children }) {
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#ffffff" />
+          <script
+              dangerouslySetInnerHTML={{
+                __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'AW-11454830556', {
+                page_path: window.location.pathname,
+              });
+            `,
+              }}
+          />
         </Head>
         <GoogleTagManager gtmId="GTM-5XXZ8LZ9" />
+        <Script
+            strategy="afterInteractive"
+            src={`https://www.googletagmanager.com/gtag/js?id=AW-11454830556`}
+        />
         <body className={`${poppins.variable} bg-white dark:bg-[#121212]`}>{children}</body>
     </html>
   )
