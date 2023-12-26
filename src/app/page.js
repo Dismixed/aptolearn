@@ -12,14 +12,14 @@ const ServiceCard = ({ icon, title, details }) => {
     return (
         <>
             <div className="w-full h-full px-4 md:w-1/2 lg:w-1/3">
-                <div className="border border-gray-200 mb-9 rounded-[20px] h-full bg-white dark:shadow-2xl dark:bg-gray-800 dark:border-0 p-10 shadow-2 transition-all hover:shadow-lg dark:bg-dark-2 md:px-7 xl:px-10">
+                <div className="border border-gray-200 mb-9 rounded-[20px] h-full bg-white  p-10 shadow-2 transition-all hover:shadow-lg md:px-7 xl:px-10">
                     <div className="mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-blue-600">
                         {icon}
                     </div>
-                    <h3 className="mb-[14px] text-2xl font-semibold text-dark dark:text-white">
+                    <h3 className="mb-[14px] text-2xl font-semibold text-dark">
                         {title}
                     </h3>
-                    <p className="text-body-color dark:text-dark-6">{details}</p>
+                    <p className="text-body-color">{details}</p>
                 </div>
             </div>
         </>
@@ -49,25 +49,25 @@ export default function Home() {
         });
     }
     return (
-        <div className="bg-white dark:bg-[#121212]">
+        <div className="bg-white">
             <main>
-                <div className={'dark:hidden w-3/4 md:w-1/2 h-40 md:h-96 absolute z-0 top-0 right-0'}>
+                <div className={' w-3/4 md:w-1/2 h-40 md:h-96 absolute z-0 top-0 right-0'}>
                     <Image alt={""} priority placeholder={'empty'} src={'/images/blur1.png'} layout={'fill'} className={'absolute top-0 right-0'}></Image>
                 </div>
-                <div className={'dark:hidden w-full md:w-2/3h h-64 md:h-2/3 absolute z-0 -left-16 top-1/8'}>
+                <div className={' w-full md:w-2/3h h-64 md:h-2/3 absolute z-0 -left-16 top-1/8'}>
                     <Image alt={""} priority placeholder={'empty'} src={'/images/blur3.png'} layout={'fill'} className={'absolute top-0 right-0'}></Image>
                 </div>
                 <section className="w-full z-10">
                     <div className="flex flex-col items-center justify-center px-8 pt-8 lg:px-12 md:pt-16 lg:pt-24">
-                        <h1 className="text-5xl animate__animated animate__fadeInUp md:text-7xl xl:text-8xl z-10 font-sans text-center px-4 md:px-16 lg:px-24 font-bold mt-8 text-dark dark:text-white">
+                        <h1 className="text-5xl animate__animated animate__fadeInUp md:text-7xl xl:text-8xl z-10 font-sans text-center px-4 md:px-16 lg:px-24 font-bold mt-8 text-dark ">
                             Start Studying Smarter. <br className="hidden lg:block" />
                             Your <span className="bg-gradient-to-r from-cyan-500 to-blue-700 text-transparent bg-clip-text">Personalized </span>Learning Path Awaits!
                         </h1>
-                        <p className="mt-6 md:mx-24 lg:mx-32 mx-8 animate__fadeIn animate__delay-1s text-xl animate__animated z-10 md:px-12 text-center text-body-color dark:text-dark-6">
+                        <p className="mt-6 md:mx-24 lg:mx-32 mx-8 animate__fadeIn animate__delay-1s text-xl animate__animated z-10 md:px-12 text-center text-body-color">
                             AptoLearn is the only hyper-personalized learning platform for college students that creates
                             a custom study path with resources specific to your goals.
                         </p>
-                        <p className={'animate__animated mt-6 animate__fadeIn animate__delay-1s text-lg animate__animated z-10 md:px-12 text-center text-body-color dark:text-dark-6'}>
+                        <p className={'animate__animated mt-6 animate__fadeIn animate__delay-1s text-lg animate__animated z-10 md:px-12 text-center text-body-color '}>
                             <span>Sign up now to get early access!</span>
                         </p>
                         <form method="post" id="form" name="form"
@@ -131,19 +131,19 @@ export default function Home() {
                 <section className="overflow-hidden pt-8 lg:pt-16 pb-12">
                     <div className="px-4 md:px-8 lg:px-12 xl:px-20 mx-auto">
                         <div className="flex flex-col md:flex-row-reverse gap-4 lg:gap-8 items-center md:justify-between">
-                            <div className="ml-4 md:px-4 w-[90%] md:w-[40%] lg:w-[50%] aspect-square bg-gray-100 dark:bg-gray-800 flex flex-row items-center">
+                            <div className="ml-4 md:px-4 w-[90%] md:w-[40%] lg:w-[50%] aspect-square bg-gray-100 flex flex-row items-center">
                                 <img className="w-full rounded" alt={"Onboarding mockup"}
                                      src="/onboardingmockup-removebg.webp"/>
                             </div>
                             <div className="px-4 w-full md:w-[60%] lg:w-[50%]">
                                 <div className="mt-10 lg:mt-0 text-center md:text-start">
-                                <span className="mb-4 text-lg font-semibold tracking-wide text-blue-600 dark:text-blue-500 uppercase">
+                                <span className="mb-4 text-lg font-semibold tracking-wide text-blue-600 uppercase">
                                     AptoLearn's Key Features
                                 </span>
-                                    <h2 className="mb-5 text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-dark dark:text-white">
+                                    <h2 className="mb-5 text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-dark">
                                         Your Personal Study Pathway
                                     </h2>
-                                    <p className="mb-5 text-lg text-body-color dark:text-dark-6">
+                                    <p className="mb-5 text-lg text-body-color">
                                         Embark on a learning journey uniquely tailored to your study goals with our
                                         cutting-edge recommendation system. Our algorithm analyzes your objectives, existing
                                         knowledge, preferred pace, and learning style to create a custom pathway unique to you.
@@ -189,33 +189,33 @@ export default function Home() {
                 <section className="overflow-hidden pt-12 lg:pb-8">
                     <div className="px-4 md:px-8 xl:px-20 mx-auto">
                         <div className="flex flex-col md:flex-row gap-4 lg:gap-8 items-center md:justify-between">
-                            <div className="ml-4 md:px-4 w-[90%] md:w-[40%] lg:w-[50%] aspect-square bg-gray-100 dark:bg-gray-800 flex flex-row items-center">
+                            <div className="ml-4 md:px-4 w-[90%] md:w-[40%] lg:w-[50%] aspect-square bg-gray-100  flex flex-row items-center">
                                 <img className="w-full rounded" alt={"Content mockup"}
                                      src="/contentmockup.webp"/>
                             </div>
                             <div className="px-4 w-full md:w-[60%] lg:w-[50%]">
                                 <div className="mt-10 lg:mt-0 text-center md:text-start">
-                                    <h2 className="mb-5 text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-dark dark:text-white">
-                                        Tailored Resources for Academic Success
+                                    <h2 className="mb-5 text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-dark ">
+                                        Resources for Every Learning Style
                                     </h2>
-                                    <p className="mb-5 text-lg text-body-color dark:text-dark-6">
-                                        At AptoLearn, we house a comprehensive content library curated
-                                        to fit exactly what you want to learn or study. Our library includes a vast selection of
+                                    <p className="mb-5 text-lg text-body-color ">
+                                        At AptoLearn, we house a comprehensive content library curated to fit exactly
+                                        what you want to learn or study. Our library includes a vast selection of
                                         educational resources of different types and subjects, meaning there will always be content
                                         specific to your goals. The days of looking for a resource for your learning needs are over.
                                     </p>
                                     <div className="mt-8 grid grid-cols-3 gap-4 md:gap-8">
                                         <AnimationOnScroll animateIn={'animate__fadeInRight'} animateOnce delay={0} className="animate__animated flex flex-col col-span-1">
-                                            <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600 dark:text-blue-500">200+</h3>
-                                            <p className="text-lg lg:text-2xl text-gray-700 dark:text-gray-300">Different <br/> Sources</p>
+                                            <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600">200+</h3>
+                                            <p className="text-lg lg:text-2xl text-gray-700">Different <br/> Sources</p>
                                         </AnimationOnScroll>
                                         <AnimationOnScroll animateIn={'animate__fadeInRight'} animateOnce delay={100} className="animate__animated flex flex-col col-span-1">
-                                            <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600 dark:text-blue-500">10</h3>
-                                            <p className="text-lg lg:text-2xl text-gray-700 dark:text-gray-300">Academic subjects</p>
+                                            <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600">10</h3>
+                                            <p className="text-lg lg:text-2xl text-gray-700">Academic subjects</p>
                                         </AnimationOnScroll>
                                         <AnimationOnScroll animateIn={'animate__fadeInRight'} animateOnce delay={200} className="animate__animated flex flex-col col-span-1">
-                                            <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600 dark:text-blue-500">5,000+</h3>
-                                            <p className="text-lg lg:text-2xl text-gray-700 dark:text-gray-300">Total <br/> Resources</p>
+                                            <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600">5,000+</h3>
+                                            <p className="text-lg lg:text-2xl text-gray-700">Total <br/> Resources</p>
                                         </AnimationOnScroll>
                                     </div>
                                 </div>
@@ -223,13 +223,50 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-                <section className="pb-4 pb-16 pt-16 dark:bg-dark">
+                <section className="overflow-hidden pt-12 lg:pb-8">
+                    <div className="px-4 md:px-8 xl:px-20 mx-auto">
+                        <div className="flex flex-col md:flex-row-reverse gap-4 lg:gap-8 items-center md:justify-between">
+                            <div className="ml-4 md:px-4 w-[90%] md:w-[40%] lg:w-[50%] aspect-square bg-gray-100  flex flex-row items-center">
+                                <img className="w-full rounded" alt={"Content mockup"}
+                                     src="/contentmockup.webp"/>
+                            </div>
+                            <div className="px-4 w-full md:w-[60%] lg:w-[50%]">
+                                <div className="mt-10 lg:mt-0 text-center md:text-start">
+                                    <h2 className="mb-5 text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-dark ">
+                                        Resources for Every Learning Style
+                                    </h2>
+                                    <p className="mb-5 text-lg text-body-color ">
+                                        At AptoLearn, we house a comprehensive content library curated to fit exactly
+                                        what you want to learn or study. Our library includes a vast selection of
+                                        educational resources of different types and subjects, meaning there will always be content
+                                        specific to your goals. The days of looking for a resource for your learning needs are over.
+                                    </p>
+                                    <div className="mt-8 grid grid-cols-3 gap-4 md:gap-8">
+                                        <AnimationOnScroll animateIn={'animate__fadeInRight'} animateOnce delay={0} className="animate__animated flex flex-col col-span-1">
+                                            <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600">200+</h3>
+                                            <p className="text-lg lg:text-2xl text-gray-700">Different <br/> Sources</p>
+                                        </AnimationOnScroll>
+                                        <AnimationOnScroll animateIn={'animate__fadeInRight'} animateOnce delay={100} className="animate__animated flex flex-col col-span-1">
+                                            <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600">10</h3>
+                                            <p className="text-lg lg:text-2xl text-gray-700">Academic subjects</p>
+                                        </AnimationOnScroll>
+                                        <AnimationOnScroll animateIn={'animate__fadeInRight'} animateOnce delay={200} className="animate__animated flex flex-col col-span-1">
+                                            <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600">5,000+</h3>
+                                            <p className="text-lg lg:text-2xl text-gray-700">Total <br/> Resources</p>
+                                        </AnimationOnScroll>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="pb-4 pb-16 pt-16">
                     <div className="px-4 md:px-8 lg:px-20 mx-auto">
                         <div className="mx-auto mb-8 md:w-3/5 text-center lg:mb-12">
-                            <div className="mb-2 text-lg font-semibold tracking-wide text-blue-600 dark:text-blue-500 uppercase">
+                            <div className="mb-2 text-lg font-semibold tracking-wide text-blue-600 uppercase">
                                 Discover AptoLearn's Benefits
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold text-center text-dark dark:text-white">
+                            <h2 className="text-4xl md:text-5xl font-bold text-center text-dark">
                                 The First Hyper-Personalized Learning Platform for College Students
                             </h2>
                         </div>
@@ -367,16 +404,16 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-                <section className="pt-16 pb-16 bg-gray-50 dark:bg-[#121212] relative">
+                <section className="pt-16 pb-16 bg-gray-50 relative">
                     <div className="px-4 md:px-8 xl:px-20 mx-auto">
-                        <div className="mb-2 text-lg font-semibold text-center tracking-wide text-blue-600 dark:blue-500 uppercase mx-auto">What Students Think About AptoLearn</div>
-                        <h2 className="text-4xl md:text-5xl mx-auto text-center font-bold text-dark dark:text-white lg:w-1/2">Studying is hard. Let us help you
+                        <div className="mb-2 text-lg font-semibold text-center tracking-wide text-blue-600 uppercase mx-auto">What Students Think About AptoLearn</div>
+                        <h2 className="text-4xl md:text-5xl mx-auto text-center font-bold text-dark lg:w-1/2">Studying is hard. Let us help you
                             help yourself.</h2>
-                        <p className="mt-4 mx-auto text-center text-lg text-body-color dark:text-dark-6 lg:w-1/2">
+                        <p className="mt-4 mx-auto text-center text-lg text-body-color lg:w-1/2">
                             AptoLearn provides you with the resources you need to succeed in your courses and beyond. See what current students are saying about AptoLearn.
                         </p>
                         <div className="mt-24 md:grid md:grid-cols-4 flex flex-col items-center justify-center gap-20 md:gap-4 lg:gap-8">
-                            <div className="col-span-1 dark:bg-gray-800  rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
+                            <div className="col-span-1 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
                                 <img className="left-0 right-0 text-center mx-auto h-24 w-24 rounded-full absolute -top-12"
                                      src="/face1.webp" alt={"Face of Eric Yu"} loading="lazy" />
                                 <p className="text-center my-auto">AptoLearn has helped me so much, especially with finals season. I have been able to just review the content I needed without extra fluff.</p>
@@ -385,7 +422,7 @@ export default function Home() {
                                 <h3 className="text-center font-bold text-xl mt-4">Eric Yu </h3>
                                 <div className="text-lg text-center">Biology Major</div>
                             </div>
-                            <div className="col-span-1 dark:bg-gray-800 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
+                            <div className="col-span-1 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
                                 <img className="left-0 right-0 text-center mx-auto h-24 w-24 rounded-full absolute -top-12"
                                      src="/face2.webp" alt={"Face of Masie Manson"} loading="lazy" />
                                 <p className="text-center my-auto">So far, AptoLearn has been a gamechanger for me. I was able to make a study path that fit my own needs and wants instead of using my classes' textbook. </p>
@@ -394,7 +431,7 @@ export default function Home() {
                                 <h3 className="text-center font-bold text-xl mt-4">Masie Manson</h3>
                                 <div className="text-lg text-center">Computer Science Major</div>
                             </div>
-                            <div className="col-span-1 dark:bg-gray-800 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
+                            <div className="col-span-1 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
                                 <img className="left-0 right-0 text-center mx-auto h-24 w-24 rounded-full absolute -top-12"
                                      src="/face3.webp" alt={"Face of Alex Dawn"} loading="lazy" />
                                 <p className="text-center my-auto">I love how the first thing I was asked is my learning style. I was sick of using resources that don't match the way I learn, but AptoLearn provided me with all kinds of resources that fit me.</p>
@@ -403,7 +440,7 @@ export default function Home() {
                                 <h3 className="text-center font-bold text-xl mt-4">Alex Dawn</h3>
                                 <div className="text-lg text-center">Economics Major</div>
                             </div>
-                            <div className="col-span-1 dark:bg-gray-800 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
+                            <div className="col-span-1 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
                                 <img className="left-0 right-0 text-center mx-auto h-24 w-24 rounded-full absolute -top-12"
                                      src="/face4.webp" alt={"Face of Jakari Harris"} loading="lazy" />
                                 <p className="text-center my-auto">I was looking for a way to review my classes effectively when I found AptoLearn. I used it to get up to speed and make sure I fully understood everything before exams.</p>
@@ -417,14 +454,14 @@ export default function Home() {
                 </section>
                 <section className="py-16 px-8">
                     <div className="mx-auto max-w-screen-xl">
-                        <h2 className="mb-8 text-4xl font-bold text-gray-900 dark:text-white">Frequently
+                        <h2 className="mb-8 text-4xl font-bold text-gray-900">Frequently
                             asked questions</h2>
                         <div
-                            className="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
+                            className="grid pt-8 text-left border-t border-gray-200 md:gap-16 md:grid-cols-2">
                             <div>
                                 <div className="mb-10">
-                                    <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
-                                        <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                                    <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900">
+                                        <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500"
                                              fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                             <path fillRule="evenodd"
                                                   d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
@@ -432,14 +469,14 @@ export default function Home() {
                                         </svg>
                                         Will AptoLearn be free?
                                     </h3>
-                                    <p className="text-gray-500 dark:text-gray-400">AptoLearn will offer a free tier with
+                                    <p className="text-gray-500">AptoLearn will offer a free tier with
                                         foundational features. Our premium tier unlocks advanced resources, personalized
                                         guidance, and enhanced tracking tools. Stay tuned for more details!
                                     </p>
                                 </div>
                                 <div className="mb-10">
-                                    <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
-                                        <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                                    <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900">
+                                        <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500"
                                              fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                             <path fillRule="evenodd"
                                                   d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
@@ -447,15 +484,15 @@ export default function Home() {
                                         </svg>
                                         How do I get access?
                                     </h3>
-                                    <p className="text-gray-500 dark:text-gray-400">Once you sign up for the waitlist and
+                                    <p className="text-gray-500">Once you sign up for the waitlist and
                                         the public beta is available, you will be notified through email about AptoLearn's beta. It will be coming soon,
                                         so make sure to keep an eye on your email!</p>
                                 </div>
                             </div>
                             <div>
                                 <div className="mb-10">
-                                    <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
-                                        <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                                    <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900">
+                                        <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500"
                                              fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                             <path fillRule="evenodd"
                                                   d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
@@ -463,15 +500,15 @@ export default function Home() {
                                         </svg>
                                         How does the reccomentation system work?
                                     </h3>
-                                    <p className="text-gray-500 dark:text-gray-400">
+                                    <p className="text-gray-500 ">
                                         AptoLearn's algorithms craft personalized learning paths based on your goals, pace,
                                         knowledge, and style. Engage with the platform to experience adaptive suggestions
                                         and tailored adjustments to enhance your learning journey.
                                     </p>
                                 </div>
                                 <div className="mb-10">
-                                    <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
-                                        <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                                    <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 ">
+                                        <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500"
                                              fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                             <path fillRule="evenodd"
                                                   d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
@@ -479,7 +516,7 @@ export default function Home() {
                                         </svg>
                                         When Will AptoLearn be released?
                                     </h3>
-                                    <p className="text-gray-500 dark:text-gray-400">AptoLearn is set to fully launch by August 2024.
+                                    <p className="text-gray-500 ">AptoLearn is set to fully launch by August 2024.
                                         The public beta, however, will be available soon. We're working diligently to ensure
                                         a seamless and enriching experience for our users. Stay tuned for updates on the official release date!
                                     </p>
@@ -489,7 +526,7 @@ export default function Home() {
                     </div>
                 </section>
                 <section className="px-4 md:px-16 lg:px-16 pb-16">
-                    <div className="w-full bg-gray-100 dark:bg-gray-800 p-8 md:p-12 lg:p-16 xl:p-24 flex flex-col lg:flex-row items-center gap-8 lg:gap-16 rounded-2xl">
+                    <div className="w-full bg-gray-100 p-8 md:p-12 lg:p-16 xl:p-24 flex flex-col lg:flex-row items-center gap-8 lg:gap-16 rounded-2xl">
                         <h3 className="text-5xl font-bold text-center lg:text-start lg:w-1/2">Join the waitlist for early access!</h3>
                         <form method="post" id="form" name="form"
                               acceptCharset="UTF-8" encType="multipart/form-data"
