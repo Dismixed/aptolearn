@@ -49,7 +49,7 @@ export default function Home() {
         });
     }
     return (
-        <div className="bg-white">
+        <div className="bg-white text-black">
             <main>
                 <div className={' w-3/4 md:w-1/2 h-40 md:h-96 absolute z-0 top-0 right-0'}>
                     <Image alt={""} priority placeholder={'empty'} src={'/images/blur1.png'} layout={'fill'} className={'absolute top-0 right-0'}></Image>
@@ -59,7 +59,7 @@ export default function Home() {
                 </div>
                 <section className="w-full z-10">
                     <div className="flex flex-col items-center justify-center px-8 pt-8 lg:px-12 md:pt-16 lg:pt-24">
-                        <h1 className="text-5xl animate__animated animate__fadeInUp md:text-7xl xl:text-8xl z-10 font-sans text-center px-4 md:px-16 lg:px-24 font-bold mt-8 text-dark ">
+                        <h1 className="text-5xl animate__animated animate__fadeInUp md:text-7xl xl:text-8xl z-10 font-sans text-center px-4 md:px-16 lg:px-24 font-bold mt-8 ">
                             Start Studying Smarter. <br className="hidden lg:block" />
                             Your <span className="bg-gradient-to-r from-cyan-500 to-blue-700 text-transparent bg-clip-text">Personalized </span>Learning Path Awaits!
                         </h1>
@@ -189,43 +189,6 @@ export default function Home() {
                 <section className="overflow-hidden pt-12 lg:pb-8">
                     <div className="px-4 md:px-8 xl:px-20 mx-auto">
                         <div className="flex flex-col md:flex-row gap-4 lg:gap-8 items-center md:justify-between">
-                            <div className="ml-4 md:px-4 w-[90%] md:w-[40%] lg:w-[50%] aspect-square bg-gray-100  flex flex-row items-center">
-                                <img className="w-full rounded" alt={"Content mockup"}
-                                     src="/contentmockup.webp"/>
-                            </div>
-                            <div className="px-4 w-full md:w-[60%] lg:w-[50%]">
-                                <div className="mt-10 lg:mt-0 text-center md:text-start">
-                                    <h2 className="mb-5 text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-dark ">
-                                        Resources for Every Learning Style
-                                    </h2>
-                                    <p className="mb-5 text-lg text-body-color ">
-                                        At AptoLearn, we house a comprehensive content library curated to fit exactly
-                                        what you want to learn or study. Our library includes a vast selection of
-                                        educational resources of different types and subjects, meaning there will always be content
-                                        specific to your goals. The days of looking for a resource for your learning needs are over.
-                                    </p>
-                                    <div className="mt-8 grid grid-cols-3 gap-4 md:gap-8">
-                                        <AnimationOnScroll animateIn={'animate__fadeInRight'} animateOnce delay={0} className="animate__animated flex flex-col col-span-1">
-                                            <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600">200+</h3>
-                                            <p className="text-lg lg:text-2xl text-gray-700">Different <br/> Sources</p>
-                                        </AnimationOnScroll>
-                                        <AnimationOnScroll animateIn={'animate__fadeInRight'} animateOnce delay={100} className="animate__animated flex flex-col col-span-1">
-                                            <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600">10</h3>
-                                            <p className="text-lg lg:text-2xl text-gray-700">Academic subjects</p>
-                                        </AnimationOnScroll>
-                                        <AnimationOnScroll animateIn={'animate__fadeInRight'} animateOnce delay={200} className="animate__animated flex flex-col col-span-1">
-                                            <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600">5,000+</h3>
-                                            <p className="text-lg lg:text-2xl text-gray-700">Total <br/> Resources</p>
-                                        </AnimationOnScroll>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section className="overflow-hidden pt-12 lg:pb-8">
-                    <div className="px-4 md:px-8 xl:px-20 mx-auto">
-                        <div className="flex flex-col md:flex-row-reverse gap-4 lg:gap-8 items-center md:justify-between">
                             <div className="ml-4 md:px-4 w-[90%] md:w-[40%] lg:w-[50%] aspect-square bg-gray-100  flex flex-row items-center">
                                 <img className="w-full rounded" alt={"Content mockup"}
                                      src="/contentmockup.webp"/>
