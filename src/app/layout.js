@@ -37,6 +37,7 @@ export default function RootLayout({ children }) {
               }}
           />
         </Head>
+        <GoogleTagManager gtmId="AW-11454830556" />
         <GoogleTagManager gtmId="GTM-5XXZ8LZ9" />
         <Script
             strategy="afterInteractive"
