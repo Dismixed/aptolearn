@@ -31,7 +31,7 @@ export default function SuccessPage() {
     return (
         <>
             <Script src={"gtag('event', 'conversion', {'send_to': 'AW-11454830556/EDvkCMyC5oIZENyvi9Yq'});"}></Script>
-            <div className="w-screen lg:h-screen bg-white text-black flex flex-col justify-center items-center">
+            <div className="w-screen h-screen bg-white text-black flex flex-col justify-center items-center">
                 <Confetti width={width} height={height}
                           recycle={false} gravity={0.25} numberOfPieces={200}/>
                 <LiaCheckCircleSolid className="text-9xl mt-12 md:mt-16 text-green-500" />

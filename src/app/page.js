@@ -7,6 +7,9 @@ import {AnimationOnScroll} from 'react-animation-on-scroll';
 import axios from 'axios'
 import Footer from "../../components/Footer";
 import { useSearchParams } from 'next/navigation'
+import {MdRocketLaunch} from "react-icons/md";
+import {FaFileUpload} from "react-icons/fa";
+import {BiSolidSelectMultiple} from "react-icons/bi";
 
 const ServiceCard = ({ icon, title, details }) => {
     return (
@@ -36,7 +39,6 @@ export default function Home() {
 
     const ref = searchParams.get('ref')
 
-    console.log(ref)
     const sendForm = (e, num) => {
         e.preventDefault();
         const body = {
@@ -191,7 +193,48 @@ export default function Home() {
                         <div className="flex flex-col md:flex-row gap-4 lg:gap-8 items-center md:justify-between">
                             <div className="ml-4 md:px-4 w-[90%] md:w-[40%] lg:w-[50%] aspect-square bg-gray-100  flex flex-row items-center">
                                 <img className="w-full rounded" alt={"Content mockup"}
-                                     src="/contentmockup.webp"/>
+                                     src="/contentmockup1.webp"/>
+                            </div>
+                            <div className="px-4 w-full md:w-[60%] lg:w-[50%]">
+                                <div className="mt-10 lg:mt-0 text-center md:text-start">
+                                    <h2 className="mb-5 text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-dark ">
+                                        Focus on What You Want to Learn
+                                    </h2>
+                                    <p className="mb-5 text-lg text-body-color ">
+                                        A key part of personalization is putting you in control of your learning journey.
+                                        With AptoLearn, you have the flexibility to tailor your course content to what
+                                        you want to learn. You can select from a wide range of topics and subtopics to
+                                        create a custom course that fits your needs or upload an image of your course
+                                        content/syllabus to get started. From there, our algorithm will create a
+                                        personalized learning pathway to help you achieve your goals.
+                                    </p>
+                                    <div className="mt-8 grid grid-cols-2 gap-4 md:gap-8">
+                                        <AnimationOnScroll animateIn={'animate__fadeInRight'} animateOnce delay={0} className="flex flex-col items-center">
+                                            <div className={"flex flex-row items-center justify-center p-2 rounded-lg bg-blue-600"}>
+                                                <BiSolidSelectMultiple className="text-5xl text-white"/>
+                                            </div>
+                                            <h3 className="text-xl mt-4 font-bold text-dark text-center">Select Content</h3>
+                                            <p className="text-md text-body-color text-center">Select from AptoLearn's tagged content library for every course.</p>
+                                        </AnimationOnScroll>
+                                        <AnimationOnScroll animateIn={'animate__fadeInRight'} animateOnce delay={100} className="flex flex-col items-center">
+                                            <div className={"flex flex-row items-center justify-center p-2 rounded-lg bg-blue-600"}>
+                                                <FaFileUpload className="text-5xl text-white"/>
+                                            </div>
+                                            <h3 className="text-xl mt-4 font-bold text-dark text-center">Upload Syllabus</h3>
+                                            <p className="text-md text-body-color text-center">Upload your course syllabus and let AptoLearn create a path based on it.</p>
+                                        </AnimationOnScroll>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="overflow-hidden pt-12 lg:pb-8">
+                    <div className="px-4 md:px-8 xl:px-20 mx-auto">
+                        <div className="flex flex-col md:flex-row-reverse gap-4 lg:gap-8 items-center md:justify-between">
+                            <div className="ml-4 md:px-4 w-[90%] md:w-[40%] lg:w-[50%] aspect-square bg-gray-100  flex flex-row items-center">
+                                <img className="w-full rounded" alt={"Content mockup"}
+                                     src="/contentmockup2.webp"/>
                             </div>
                             <div className="px-4 w-full md:w-[60%] lg:w-[50%]">
                                 <div className="mt-10 lg:mt-0 text-center md:text-start">
@@ -205,15 +248,15 @@ export default function Home() {
                                         specific to your goals. The days of looking for a resource for your learning needs are over.
                                     </p>
                                     <div className="mt-8 grid grid-cols-3 gap-4 md:gap-8">
-                                        <AnimationOnScroll animateIn={'animate__fadeInRight'} animateOnce delay={0} className="animate__animated flex flex-col col-span-1">
+                                        <AnimationOnScroll animateIn={'animate__fadeInLeft'} animateOnce delay={200} className="animate__animated flex flex-col col-span-1">
                                             <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600">200+</h3>
                                             <p className="text-lg lg:text-2xl text-gray-700">Different <br/> Sources</p>
                                         </AnimationOnScroll>
-                                        <AnimationOnScroll animateIn={'animate__fadeInRight'} animateOnce delay={100} className="animate__animated flex flex-col col-span-1">
+                                        <AnimationOnScroll animateIn={'animate__fadeInLeft'} animateOnce delay={100} className="animate__animated flex flex-col col-span-1">
                                             <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600">10</h3>
                                             <p className="text-lg lg:text-2xl text-gray-700">Academic subjects</p>
                                         </AnimationOnScroll>
-                                        <AnimationOnScroll animateIn={'animate__fadeInRight'} animateOnce delay={200} className="animate__animated flex flex-col col-span-1">
+                                        <AnimationOnScroll animateIn={'animate__fadeInLeft'} animateOnce delay={0} className="animate__animated flex flex-col col-span-1">
                                             <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-blue-600">5,000+</h3>
                                             <p className="text-lg lg:text-2xl text-gray-700">Total <br/> Resources</p>
                                         </AnimationOnScroll>
@@ -376,7 +419,7 @@ export default function Home() {
                             AptoLearn provides you with the resources you need to succeed in your courses and beyond. See what current students are saying about AptoLearn.
                         </p>
                         <div className="mt-24 md:grid md:grid-cols-4 flex flex-col items-center justify-center gap-20 md:gap-4 lg:gap-8">
-                            <div className="col-span-1 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
+                            <div className="drop-shadow-xl col-span-1 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
                                 <img className="left-0 right-0 text-center mx-auto h-24 w-24 rounded-full absolute -top-12"
                                      src="/face1.webp" alt={"Face of Eric Yu"} loading="lazy" />
                                 <p className="text-center my-auto">AptoLearn has helped me so much, especially with finals season. I have been able to just review the content I needed without extra fluff.</p>
@@ -385,7 +428,7 @@ export default function Home() {
                                 <h3 className="text-center font-bold text-xl mt-4">Eric Yu </h3>
                                 <div className="text-lg text-center">Biology Major</div>
                             </div>
-                            <div className="col-span-1 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
+                            <div className="drop-shadow-xl col-span-1 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
                                 <img className="left-0 right-0 text-center mx-auto h-24 w-24 rounded-full absolute -top-12"
                                      src="/face2.webp" alt={"Face of Masie Manson"} loading="lazy" />
                                 <p className="text-center my-auto">So far, AptoLearn has been a gamechanger for me. I was able to make a study path that fit my own needs and wants instead of using my classes' textbook. </p>
@@ -394,7 +437,7 @@ export default function Home() {
                                 <h3 className="text-center font-bold text-xl mt-4">Masie Manson</h3>
                                 <div className="text-lg text-center">Computer Science Major</div>
                             </div>
-                            <div className="col-span-1 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
+                            <div className="drop-shadow-xl col-span-1 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
                                 <img className="left-0 right-0 text-center mx-auto h-24 w-24 rounded-full absolute -top-12"
                                      src="/face3.webp" alt={"Face of Alex Dawn"} loading="lazy" />
                                 <p className="text-center my-auto">I love how the first thing I was asked is my learning style. I was sick of using resources that don't match the way I learn, but AptoLearn provided me with all kinds of resources that fit me.</p>
@@ -403,7 +446,7 @@ export default function Home() {
                                 <h3 className="text-center font-bold text-xl mt-4">Alex Dawn</h3>
                                 <div className="text-lg text-center">Economics Major</div>
                             </div>
-                            <div className="col-span-1 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
+                            <div className="drop-shadow-xl col-span-1 rounded-xl h-full pt-16 p-8 bg-white relative rounded-xl flex flex-col justify-center">
                                 <img className="left-0 right-0 text-center mx-auto h-24 w-24 rounded-full absolute -top-12"
                                      src="/face4.webp" alt={"Face of Jakari Harris"} loading="lazy" />
                                 <p className="text-center my-auto">I was looking for a way to review my classes effectively when I found AptoLearn. I used it to get up to speed and make sure I fully understood everything before exams.</p>
