@@ -8,8 +8,9 @@ import axios from 'axios'
 import Footer from "../../components/Footer";
 import { useSearchParams } from 'next/navigation'
 import {MdRocketLaunch} from "react-icons/md";
-import {FaFileUpload} from "react-icons/fa";
+import {FaCheck, FaFileUpload} from "react-icons/fa";
 import {BiSolidSelectMultiple} from "react-icons/bi";
+import {FaCircleCheck} from "react-icons/fa6";
 
 const ServiceCard = ({ icon, title, details }) => {
     return (
@@ -69,22 +70,24 @@ export default function Home() {
                             AptoLearn is the only hyper-personalized learning platform for college students that creates
                             a custom study path with resources specific to your goals.
                         </p>
-                        <p className={'animate__animated mt-6 animate__fadeIn animate__delay-1s text-lg animate__animated z-10 md:px-12 text-center text-body-color '}>
-                            <span>Sign up now to get early access!</span>
+                        <p className={'animate__animated mt-6 text-xl animate__fadeIn animate__delay-1s text-lg animate__animated z-10 md:px-12 text-center text-body-color '}>
+                            <span>Join the waitlist to get a free lifetime membership on launch!</span>
                         </p>
                         <form method="post" id="form" name="form"
                               acceptCharset="UTF-8" encType="multipart/form-data"
-                              className="p-2 mt-2 animate__animated animate__fadeIn animate__delay-1s transition duration-500 ease-in-out transform border2 bg-gray-50 rounded-xl w-full md:w-3/4 lg:w-1/2 sm:flex">
-                            <div className="flex-1 min-w-0 revue-form-group">
-                                <label htmlFor="member_email" className="sr-only">Email address</label>
-                                <input id="cta-email" type="email" onChange={(e) => setEmail(e.target.value)} value={email}
-                                       className="block w-full px-5 py-3 text-base placeholder-gray-300 transition duration-500 ease-in-out transform bg-transparent border border-transparent rounded-md text-neutral-600 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
-                                       placeholder="Enter your email  " />
-                            </div>
-                            <div className="mt-4 sm:mt-0 sm:ml-3 revue-form-actions">
-                                <button type="submit" name="Subscribe"
-                                        id="member_submit" onClick={(e) => sendForm(e, 1)}
-                                        className="block w-full px-5 py-3 text-base font-medium text-white bg-blue-600 border border-transparent rounded-lg shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300 sm:px-10">Sign up</button>
+                              className="mt-2 animate__animated animate__fadeIn animate__delay-1s transition duration-500 ease-in-out w-full md:w-3/4 lg:w-1/2 flex flex-col">
+                            <div className="flex flex-row p-2 transform border2 bg-gray-100 rounded-xl">
+                                <div className="flex-1 min-w-0 revue-form-group">
+                                    <label htmlFor="member_email" className="sr-only">Email address</label>
+                                    <input id="cta-email" type="email" onChange={(e) => setEmail(e.target.value)} value={email}
+                                           className="block w-full px-5 py-3 text-base placeholder-gray-300 transition duration-500 ease-in-out transform bg-transparent border border-transparent rounded-md text-neutral-600 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
+                                           placeholder="Enter your email" />
+                                </div>
+                                <div className="mt-4 sm:mt-0 sm:ml-3 revue-form-actions">
+                                    <button type="submit" name="Subscribe"
+                                            id="member_submit" onClick={(e) => sendForm(e, 1)}
+                                            className="block w-full px-5 py-3 text-base font-medium text-white bg-blue-600 border border-transparent rounded-lg shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300 sm:px-10">Sign up</button>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -533,7 +536,7 @@ export default function Home() {
                 </section>
                 <section className="px-4 md:px-16 lg:px-16 pb-16">
                     <div className="w-full bg-gray-100 p-8 md:p-12 lg:p-16 xl:p-24 flex flex-col lg:flex-row items-center gap-8 lg:gap-16 rounded-2xl">
-                        <h3 className="text-5xl font-bold text-center lg:text-start lg:w-1/2">Join the waitlist for early access!</h3>
+                        <h3 className="text-4xl font-bold text-center lg:text-start lg:w-1/2">Join the waitlist for a free lifetime membership!</h3>
                         <form method="post" id="form" name="form"
                               acceptCharset="UTF-8" encType="multipart/form-data"
                               className="p-2 transition duration-500 ease-in-out transform border2 bg-gray-50 w-full lg:w-1/2 rounded-xl sm:flex">
