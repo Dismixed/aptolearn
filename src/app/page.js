@@ -34,22 +34,41 @@ const ServiceCard = ({ icon, title, details }) => {
 export default function Home() {
     const [email, setEmail] = useState('');
     const [email2, setEmail2] = useState('');
-
+    const [emailError, setEmailError] = useState("");
     const searchParams = useSearchParams()
     const router = useRouter();
 
     const ref = searchParams.get('ref')
 
+    const emailValidate = (validateemail) => {
+        console.log(validateemail)
+        if (validateemail === "") {
+            setEmailError("Email is required");
+            console.log("1")
+            return false;
+        } else if (!/\S+@\S+\.\S+/.test(validateemail)) {
+            setEmailError("Email address is invalid");
+            console.log("2")
+            return false;
+        } else {
+            setEmailError("");
+            console.log("3")
+            return true;
+        }
+    }
+
     const sendForm = (e, num) => {
         e.preventDefault();
-        const body = {
-            email: num === 1 ? email : email2,
-            ref: ref
+        if (emailValidate(num === 1 ? email : email2)) {
+            const body = {
+                email: num === 1 ? email : email2,
+                ref: ref
+            }
+            console.log(body)
+            axios.post('https://edulearningbackend-d59f4d283be3.herokuapp.com/waitlist', body).then((response) => {
+                router.push(`/success?code=${response.data.code}`)
+            });
         }
-        console.log(body)
-        axios.post('https://edulearningbackend-d59f4d283be3.herokuapp.com/waitlist', body).then((response) => {
-            router.push(`/success?code=${response.data.code}`)
-        });
     }
     return (
         <div className="bg-white text-black">
@@ -79,7 +98,7 @@ export default function Home() {
                             <div className="flex flex-row p-2 transform border2 bg-gray-100 rounded-xl">
                                 <div className="flex-1 min-w-0 revue-form-group">
                                     <label htmlFor="member_email" className="sr-only">Email address</label>
-                                    <input id="cta-email" type="email" onChange={(e) => setEmail(e.target.value)} value={email}
+                                    <input id="cta-email" type="email" onChange={(e) => {setEmail(e.target.value); setEmailError("");}} value={email}
                                            className="block w-full px-5 py-3 text-base placeholder-gray-300 transition duration-500 ease-in-out transform bg-transparent border border-transparent rounded-md text-neutral-600 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
                                            placeholder="Enter your email" />
                                 </div>
@@ -90,6 +109,7 @@ export default function Home() {
                                 </div>
                             </div>
                         </form>
+                        <p className="mt-2 text-red-500">{emailError}</p>
                     </div>
                 </section>
                 <div className="w-full mt-8 lg:mt-4 z-10">
