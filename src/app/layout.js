@@ -2,11 +2,13 @@ import './globals.css'
 import { Poppins } from 'next/font/google'
 import Head from 'next/head'
 import Script from "next/script";
+
 const poppins = Poppins({
   subsets: ['latin'],
   variable: '--font-poppins',
   weight: ['400', '500', '600', '700']
 })
+
 import { GoogleTagManager } from '@next/third-parties/google'
 
 export default function RootLayout({ children }) {
