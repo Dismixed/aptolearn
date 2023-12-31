@@ -12,15 +12,15 @@ import {
 import { EmailIcon, FacebookIcon, LinkedinIcon, TwitterIcon, RedditIcon } from 'react-share'
 
 import Confetti from 'react-confetti'
-import { useSearchParams } from 'next/navigation'
-import Head from "next/head";
 import Script from "next/script";
 
 export default function SuccessPage() {
     const [width, setWidth] = React.useState(0)
     const [height, setHeight] = React.useState(0)
 
-    const searchParams = useSearchParams()
+    const searchParams = new URLSearchParams(
+        typeof window !== 'undefined' ? window.location.search : '',
+    );
     const code = searchParams.get('code')
 
     React.useEffect(() => {

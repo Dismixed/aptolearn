@@ -6,7 +6,6 @@ import { useRouter } from 'next/navigation'
 import {AnimationOnScroll} from 'react-animation-on-scroll';
 import axios from 'axios'
 import Footer from "../../components/Footer";
-import { useSearchParams } from 'next/navigation'
 import {MdRocketLaunch} from "react-icons/md";
 import {FaCheck, FaFileUpload} from "react-icons/fa";
 import {BiSolidSelectMultiple} from "react-icons/bi";
@@ -35,7 +34,9 @@ export default function Home() {
     const [email, setEmail] = useState('');
     const [email2, setEmail2] = useState('');
     const [emailError, setEmailError] = useState("");
-    const searchParams = useSearchParams()
+    const searchParams = new URLSearchParams(
+        typeof window !== 'undefined' ? window.location.search : '',
+    );
     const router = useRouter();
 
     const ref = searchParams.get('ref')
