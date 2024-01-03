@@ -1,0 +1,51 @@
+#blog h2 {
+    font-weight: 600;
+    font-size: 3rem; /* 48px */
+    line-height: 1; /* 48px */
+    margin-bottom: 1rem; /* 16px */
+    margin-top: 1rem; /* 16px */
+}
+
+#blog p {
+    font-weight: 400;
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.75rem; /* 28px */
+}
+
+#blog h3 {
+    font-weight: 500;
+    font-size: 1.875rem; /* 30px */
+    line-height: 2.25rem; /* 36px */
+    margin-bottom: 0.75rem; /* 16px */
+    margin-top: 1.5rem; /* 24px */
+}
+
+#blog img {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+blockquote {
+    background: #f9f9f9;
+    border-left: 3px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+blockquote p {
+    display: inline-block;
+}
+
+#blog ul {
+    list-style-type: circle;
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#blog ol {
+    list-style-type: decimal;
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+}

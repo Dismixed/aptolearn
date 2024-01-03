@@ -10,6 +10,7 @@ import {MdRocketLaunch} from "react-icons/md";
 import {FaCheck, FaFileUpload} from "react-icons/fa";
 import {BiSolidSelectMultiple} from "react-icons/bi";
 import {FaCircleCheck} from "react-icons/fa6";
+import Header from "../../components/Header";
 
 const ServiceCard = ({ icon, title, details }) => {
     return (
@@ -73,6 +74,7 @@ export default function Home() {
     }
     return (
         <div className="bg-white text-black">
+            <Header />
             <main>
                 <div className={' w-3/4 md:w-1/2 h-40 md:h-96 absolute z-0 top-0 right-0'}>
                     <Image alt={""} priority placeholder={'empty'} src={'/images/blur1.png'} layout={'fill'} className={'absolute top-0 right-0'}></Image>
