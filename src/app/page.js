@@ -10,6 +10,7 @@ import {MdRocketLaunch} from "react-icons/md";
 import {FaCheck, FaFileUpload} from "react-icons/fa";
 import {BiSolidSelectMultiple} from "react-icons/bi";
 import {FaCircleCheck} from "react-icons/fa6";
+import Header from "../../components/Header";
 
 const ServiceCard = ({ icon, title, details }) => {
     return (
@@ -81,29 +82,29 @@ export default function Home() {
                     <Image alt={""} priority placeholder={'empty'} src={'/images/blur3.png'} layout={'fill'} className={'absolute top-0 right-0'}></Image>
                 </div>
                 <section className="w-full z-10">
-                    <div className="flex flex-col items-center justify-center px-8 pt-8 lg:px-12 md:pt-16 lg:pt-24">
-                        <h1 className="text-5xl animate__animated animate__fadeInUp md:text-7xl xl:text-8xl z-10 font-sans text-center px-4 md:px-16 lg:px-24 font-bold mt-8 ">
+                    <div className="flex flex-col items-center justify-center px-2 pt-6 lg:px-12 md:pt-16">
+                        <h1 className="text-[3.25rem] leading-none animate__animated animate__fadeInUp md:text-7xl xl:text-8xl z-10 font-sans text-center px-4 md:px-16 lg:px-24 font-bold mt-8 ">
                             Start Studying Smarter. <br className="hidden lg:block" />
                             Your <span className="bg-gradient-to-r from-cyan-500 to-blue-700 text-transparent bg-clip-text">Personalized </span>Learning Path Awaits!
                         </h1>
-                        <p className="mt-6 md:mx-24 lg:mx-32 mx-8 animate__fadeIn animate__delay-1s text-xl animate__animated z-10 md:px-12 text-center text-body-color">
+                        <p className="mt-6 md:mx-24 lg:mx-32 mx-4 animate__fadeIn animate__delay-1s text-lg md:text-xl animate__animated z-10 md:px-12 text-center text-body-color">
                             AptoLearn is the only hyper-personalized learning platform for college students that creates
-                            a custom study path with resources specific to your goals.
+                            a custom study path based on your needs and goals.
                         </p>
-                        <p className={'animate__animated mt-6 text-xl animate__fadeIn animate__delay-1s text-lg animate__animated z-10 md:px-12 text-center text-body-color '}>
-                            <span>Join the waitlist to get a free lifetime membership on launch!</span>
+                        <p className={'animate__animated px-2 mt-6 text-lg md:text-xl animate__fadeIn animate__delay-1s text-lg animate__animated z-10 md:px-12 text-center text-body-color '}>
+                            <span>Join the waitlist for a free lifetime membership!</span>
                         </p>
                         <form method="post" id="form" name="form"
                               acceptCharset="UTF-8" encType="multipart/form-data"
-                              className="mt-2 animate__animated animate__fadeIn animate__delay-1s transition duration-500 ease-in-out w-full md:w-3/4 lg:w-1/2 flex flex-col">
-                            <div className="flex flex-row p-2 transform border2 bg-gray-100 rounded-xl">
+                              className="mt-2 animate__animated animate__fadeIn animate__delay-1s px-2 md:px-0 transition duration-500 ease-in-out w-full md:w-3/4 lg:w-1/2 flex flex-col">
+                            <div className="flex flex-row items-center h-min p-2 transform bg-gray-100 rounded-xl">
                                 <div className="flex-1 min-w-0 revue-form-group">
                                     <label htmlFor="member_email" className="sr-only">Email address</label>
                                     <input id="cta-email" type="email" onChange={(e) => {setEmail(e.target.value); setEmailError("");}} value={email}
                                            className="block w-full px-5 py-3 text-base placeholder-gray-300 transition duration-500 ease-in-out transform bg-transparent border border-transparent rounded-md text-neutral-600 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
                                            placeholder="Enter your email" />
                                 </div>
-                                <div className="mt-4 sm:mt-0 sm:ml-3 revue-form-actions">
+                                <div className="revue-form-actions">
                                     <button type="submit" name="Subscribe"
                                             id="member_submit" onClick={(e) => sendForm(e, 1)}
                                             className="block w-full px-5 py-3 text-base font-medium text-white bg-blue-600 border border-transparent rounded-lg shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300 sm:px-10">Sign up</button>
@@ -154,7 +155,7 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-                <section className="overflow-hidden pt-8 lg:pt-16 pb-12">
+                <section className="overflow-hidden pt-12 lg:pb-8">
                     <div className="px-4 md:px-8 lg:px-12 xl:px-20 mx-auto">
                         <div className="flex flex-col md:flex-row-reverse gap-4 lg:gap-8 items-center md:justify-between">
                             <div className="ml-4 md:px-4 w-[90%] md:w-[40%] lg:w-[50%] aspect-square bg-gray-100 flex flex-row items-center">
