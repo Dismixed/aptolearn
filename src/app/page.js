@@ -10,7 +10,6 @@ import {MdRocketLaunch} from "react-icons/md";
 import {FaCheck, FaFileUpload} from "react-icons/fa";
 import {BiSolidSelectMultiple} from "react-icons/bi";
 import {FaCircleCheck} from "react-icons/fa6";
-import Header from "../../components/Header";
 
 const ServiceCard = ({ icon, title, details }) => {
     return (
