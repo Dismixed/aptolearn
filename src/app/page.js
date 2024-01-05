@@ -84,13 +84,13 @@ export default function Home() {
                     <div className="flex flex-col items-center justify-center px-2 pt-6 lg:px-12 md:pt-16">
                         <h1 className="text-[3.25rem] leading-none animate__animated animate__fadeInUp md:text-7xl xl:text-8xl z-10 font-sans text-center px-4 md:px-16 lg:px-24 font-bold mt-8 ">
                             Start Studying Smarter. <br className="hidden lg:block" />
-                            Your <span className="bg-gradient-to-r from-cyan-500 to-blue-700 text-transparent bg-clip-text">Personalized </span>Learning Path Awaits!
+                            Your <span className="bg-gradient-to-r from-cyan-500 to-blue-700 text-transparent bg-clip-text">AI Study Path</span> Awaits!
                         </h1>
-                        <p className="mt-6 md:mx-24 lg:mx-32 mx-4 animate__fadeIn animate__delay-1s text-lg md:text-xl animate__animated z-10 md:px-12 text-center text-body-color">
-                            AptoLearn is the only hyper-personalized learning platform for college students that creates
-                            a custom study path based on your needs and goals.
+                        <p className="mt-6 text-gray-800 md:px-32 lg:px-48 px-4 animate__fadeIn animate__delay-1s text-lg md:text-xl animate__animated z-10 text-center">
+                            AptoLearn is the only study platform for students that uses AI to craft custom study plans proven to improve exam scores.
+                            Elevate your learning experience with hyper-personalized pathways tailored to your unique strengths, weaknesses, and goals.
                         </p>
-                        <p className={'animate__animated px-2 mt-6 text-lg md:text-xl animate__fadeIn animate__delay-1s text-lg animate__animated z-10 md:px-12 text-center text-body-color '}>
+                        <p className={'animate__animated px-2 font-medium mt-6 text-lg animate__fadeIn animate__delay-1s text-lg animate__animated z-10 md:px-12 text-center text-body-color '}>
                             <span>Join the waitlist for a free lifetime membership!</span>
                         </p>
                         <form method="post" id="form" name="form"
@@ -170,9 +170,9 @@ export default function Home() {
                                         Your Personal Study Pathway
                                     </h2>
                                     <p className="mb-5 text-lg text-body-color">
-                                        Embark on a learning journey uniquely tailored to your study goals with our
-                                        cutting-edge recommendation system. Our algorithm analyzes your objectives, existing
-                                        knowledge, preferred pace, and learning style to create a custom pathway unique to you.
+                                        Embark on a learning journey tailored to your study goals with our AI algorithm.
+                                        Our algorithm analyzes your objectives, existing knowledge, preferred pace,
+                                        learning style, and more to create a custom pathway unique to you.
                                         It then creates a roadmap to help you learn, study, or review in the most efficient way possible.
                                     </p>
                                     <div className="mt-8 flex flex-col gap-2 xl:gap-8">
@@ -194,7 +194,7 @@ export default function Home() {
                                                           d="M5 13l4 4L19 7"/>
                                                 </svg>
                                             </div>
-                                            <p className="text-md xl:text-lg ml-2 md:ml-4"><span className="font-bold">Objective Analysis</span>: Our algorithm analyzes your learning objectives to create precise recommendations.</p>
+                                            <p className="text-md xl:text-lg ml-2 md:ml-4"><span className="font-bold">Artificial Intelligence</span>: Our algorithm analyzes your learning objectives to create precise recommendations.</p>
                                         </AnimationOnScroll>
                                         <AnimationOnScroll animateIn={'animate__fadeInLeft'} animateOnce className="flex flex-row items-center animate__animated">
                                             <div className="flex flex-row items-center justify-center p-1 rounded-full bg-blue-600">
